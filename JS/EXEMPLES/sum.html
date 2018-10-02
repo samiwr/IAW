@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+function suma(a,b){
+  return a+b;
+}
+function restar(a,b){
+  return a-b;
+}
+function calculadora(){
+  var a = parseInt(document.getElementById('op1').value);
+  var b = parseInt(document.getElementById('op2').value);
+  var c = suma(a,b);
+  document.getElementById("resultat").innerHTML=c;
+}
+function reset(){
+document.getElementById('op1').value=0;
+document.getElementById('op2').value=0;
+document.getElementById('resultat').innerHTML="";
+}
+</script>
+</head>
+<body>
+  <script type="text/javascript">
+      var x =3;
+      var y =5;
+      var z = suma(x, y);
+      document.write("La suma de " +x+" i "+y+" es "+z);
+  </script>
+  <p>Operando 1
+    <input type="text" id="op1" value="0"/><br>
+    Operando 2
+    <input type="text" id="op2" value="0"/><br><br>
+    <button onclick="calculadora()">SUMA</button>
+    <button onclick="calculadora()">RESTA</button>
+<br><br>
+    <button onclick="reset()">CLEAR</button>
+  </p>
+  <p id="resultat"></p>
+</body>
+</html>
