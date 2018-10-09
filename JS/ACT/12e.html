@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script type='text/javascript'>
+
+var s1 = prompt("Costat 1 del triangle (numero)","")
+var s2 = prompt("Costat 2 del triangle (numero)","")
+var s3 = prompt("Costat 3 del triangle (numero)","")
+
+
+function ttriangle(a,b,c) {
+  	return (a === b && b === c) && 'equilatero' ||
+  		(a === b || a === c || b === c) && 'isosceles' ||
+  		'escaleno';
+}
+
+alert(ttriangle(s1,s2,s3));
+
+  </script>
+</head>
+</html>
