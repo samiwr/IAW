@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SHOPPING LIST</title>
+		<script>
+			function printList(){
+				var txt="";
+				for(var i=0; i<llistaCompra.length; i++){
+					txt = txt + "<li>" + llistaCompra[i]+ "</li>";
+				}
+				var u = document.getElementById("llista");
+				u.innerHTML = txt;
+			}
+			function afegirInici(){
+				var nou = document.getElementById("item").value;
+				llistaCompra.unshift(nou);
+				printList();
+			}
+      function afegirFinal(){
+        var nou = document.getElementById("item").value;
+        llistaCompra.push(nou);
+        printList();
+      }
+      function llevarPrimer(){
+        llistaCompra.shift();
+        printList();
+      }
+      function llevarDarrer(){
+        llistaCompra.pop();
+        printList();
+      }
+      function sort(){
+        llistaCompra.sort();
+        printList();
+      }
+      function sortRev(){
+        llistaCompra.sort();
+        llistaCompra.reverse();
+        printList();
+      }
+      function hihaPatates(){
+        var p = llistaCompra.indexOf("POTATOES");
+        if(p!==-1){
+          alert("N'hi ha")
+        }
+        else {
+          alert("no hi ha")
+        }
+      }
+      function mayuscula(){
+      }
+
+		</script>
+	</head>
+	<body>
+		<h3>Shopping List</h3>
+		<ul id="llista">
+		</ul>
+		<hr/>
+		ITEM: <input type="text" id="item" /><br/><br/>
+		<button onclick="afegirInici()">AFEGIR INICI</button>
+    <button onclick="afegirFinal()">AFEGIR FINAL</button>
+    <button onclick="llevarPrimer()">LLEVAR PRIMER</button>
+    <button onclick="llevarDarrer()">LLEVAR DARRER</button>
+    <button onclick="sort()">SORT ASC</button>
+    <button onclick="sortRev()">SORT DESC</button>
+    <button onclick="hihaPatates()">HI HA PATATES?</button>
+    <button onclick="minuscula()">MINUSCULA</button>
+    <button onclick="mayuscula()">MAYUSCULA</button>
+		<script>
+			var llistaCompra = new Array();
+			llistaCompra[0]="POTATOES";
+			llistaCompra[1]="MILK";
+			printList();
+		</script>
+	</body>
+</html>
