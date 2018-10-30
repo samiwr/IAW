@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<h1 class="impar">TITOL</h1>
+<h1>SAMI</h1>
+<p class="impar">feeet1</p>
+<p>feet2</p>
+<p class="impar">feeet3</p>
+<button id="pet">petit</button>
+<button id="med">medium</button>
+<button id="gran">gran</button>
+<script>
+$("#pet").click(function(){
+  $(".impar").css("font-size","10px")
+})
+$("#med").click(function(){
+  $(".impar").css("font-size","15px")
+})
+$("#gran").click(function(){
+  $(".impar").css("font-size","20px")
+})
+</script>
+</body>
