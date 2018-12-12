@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+	<style type="text/css">
+		.blue {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("#i1").focus(function(){
+				$(this).css("color","red");
+			});
+			$("#i2").focus(function(){
+				$(this).css("color","red");
+			});
+		});
+	</script>
+	Username: <input type="text" name="username" id="i1" class="blue" value="User"><br>
+	Password: <input type="text" name="pass" id="i2" class="blue" value="Passwd">
+</body>
+</html>

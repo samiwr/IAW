@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+</head>
+<body>
+	<script>
+		var x;
+		x=$("#div");
+		x.ready(initEvents);
+
+		function initEvents() {
+			var x;
+			x=$("#div");
+			x.mousemove(moveMouse);
+		}
+
+		function moveMouse(event) {
+			var x;
+			x=$("#corx");
+			x.text("coordinate x="+event.clientX);
+			x=$("#cory");
+			x.text("coordinate y="+event.clientY);
+		}
+
+		function mouseExit () {
+			var x;
+			if ($("#div").mouseout() = false
+		}
+	</script>
+	<div style="height: 200px; width: 200px; background-color: red;" id="div"></div>
+	<p id="corx">coordinate x=</p>
+	<p id="cory">coordinate y=</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+	<style type="text/css">
+		.style1 {
+			background-color: red;
+		}
+
+		.style2 {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("thead").addClass("style1");
+				$("tbody").addClass("style2");
+			});
+			$("#b2").click(function(){
+				$("thead").removeClass("style1");
+				$("tbody").removeClass("style2");
+			});
+		});
+	</script>
+	<table>
+  		<thead>
+    		<tr>
+      			<th>Month</th>
+      			<th>Savings</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+    		<tr>
+      			<td>January</td>
+      			<td>$100</td>
+    		</tr>
+    		<tr>
+      			<td>February</td>
+      			<td>$80</td>
+   			</tr>
+    		<tr>
+      			<td>Sum</td>
+      			<td>$180</td>
+    		</tr>
+    	</tbody>
+	</table>
+	<br><br>
+	<input type="button" id="b1" value="Link Class">
+	<input type="button" id="b2" value="Unlink Class">
+</body>
+</html>

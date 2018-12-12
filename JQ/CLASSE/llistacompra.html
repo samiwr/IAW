@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+  <h1>AMAZON</h1>
+<ul id="ta">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+ARTICLE: <input type="text" id="xd"></input><br><br>
+<button type="button" name="append" id="append">APPEND</button>
+<button type="button" name="preppend" id="preppend">APPEND</button>
+<button type="button" name="empty" id="empty">APPEND</button>
+<script>
+$(document).ready(function(){
+  $("#append").click(function(){
+    var t = $("#xd").val();
+    var newLI = $("<li/>",{text:t});
+    $("#ta").append(newLI);
+  });
+
+  $("#prepend").click(function(){
+    var t = $("#xd").val();
+    var newLI = $("<li/>",{text:t});
+    $("#ta").prepend(newLI);
+  });
+
+
+
+
+
+
+});
+</script>
+</body>

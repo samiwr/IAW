@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("td").mouseover(function(){
+				$(this).css("background-color","red");
+			});
+			$("td").mouseout(function(){
+				$(this).css("background-color","");
+			});
+		});
+	</script>
+	<table>
+    	<tr>
+      		<td>January</td>
+      		<td>$100</td>
+    	</tr>
+    	<tr>
+      		<td>February</td>
+      		<td>$80</td>
+   		</tr>
+	</table>
+</body>
+</html>

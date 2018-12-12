@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+</head>
+<body>
+	<script>
+		var x;
+		x=$(document);
+		x.ready(initEvents);
+
+		function initEvents() {
+			var x;
+			x=$("#b1");
+			x.mousedown(releaseMouse);
+			x.mouseup(pressMouse);
+		}
+
+		function releaseMouse() {
+			$(this).css("background-color","red");
+		}
+
+		function pressMouse() {
+			$(this).css("background-color","");
+		}
+	</script>
+	<input type="button" id="b1" value="Hold this button">
+</body>
+</html>

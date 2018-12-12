@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("td").hover(mouse1,mouse2);
+				function mouse1() {
+					$(this).css("background-color","red");
+				}
+				function mouse2() {
+					$(this).css("background-color","");
+				}
+		});
+	</script>
+	<table>
+    	<tr>
+      		<td>January</td>
+      		<td>$100</td>
+    	</tr>
+    	<tr>
+      		<td>February</td>
+      		<td>$80</td>
+   		</tr>
+	</table>
+</body>
+</html>

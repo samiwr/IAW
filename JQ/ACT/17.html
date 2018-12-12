@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<script src="..\jquery_3-3-1.js"></script>
+</head>
+<body>
+	Username: <input type="text" name="username" id="i1" value="User">
+	<script>
+		$(document).ready(function(){
+			$("#i1").blur(function(){
+				var x=document.getElementById('i1').value;
+				var y=x.length;
+				if (y==0) {
+					alert("Field must not be empty");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
